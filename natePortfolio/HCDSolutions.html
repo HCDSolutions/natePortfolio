@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nathan Walters | UX Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="theme-picker" aria-label="Theme Picker">
+        <button data-theme="default" aria-label="Default Theme"></button>
+        <button data-theme="ocean" aria-label="Ocean Theme"></button>
+        <button data-theme="rose" aria-label="Rose Theme"></button>
+      </div>
+    </header>
+
+    <main>
+      <section id="home">
+        <h1>Nathan Walters</h1>
+        <p>UX Designer & Researcher</p>
+        <img src="your-hero-image.jpg" alt="Nathan Walters UX Portfolio Hero" />
+      </section>
+
+      <section id="about">
+        <h2>About Me</h2>
+        <p>Short bio and UX philosophy.</p>
+        <!-- Optional: Embed a video introduction -->
+        <!-- <video controls src="about-video.mp4"></video> -->
+        <a href="NathanWalters_Resume.pdf" download>Download Resume</a>
+      </section>
+
+      <section id="portfolio">
+        <h2>Selected Work</h2>
+        <!-- Repeat this block for each project -->
+        <article class="project">
+          <h3>Project Title</h3>
+          <img src="project-thumbnail.jpg" alt="Project Thumbnail" />
+          <p>Short project summary.</p>
+          <a href="project1.html">View Case Study</a>
+        </article>
+      </section>
+
+      <!-- ...existing code... -->
+      <section id="process" class="parallax-section">
+        <h2>My UX Process</h2>
+        <div class="process-steps">
+          <div class="step">
+            <h3>Empathize</h3>
+            <p>Understand users through research and interviews.</p>
+          </div>
+          <div class="step">
+            <h3>Define</h3>
+            <p>Clarify user needs and project goals.</p>
+          </div>
+          <div class="step">
+            <h3>Ideate</h3>
+            <img
+              src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=600&q=80"
+              alt="Brainstorming with sticky notes"
+              style="width: 100%; border-radius: 8px; margin-bottom: 1em"
+            />
+            <p>Brainstorm creative solutions and concepts.</p>
+          </div>
+          <div class="step">
+            <h3>Prototype</h3>
+            <p>Build interactive models for testing ideas.</p>
+          </div>
+          <div class="step">
+            <h3>Test</h3>
+            <p>Validate solutions with real users and iterate.</p>
+          </div>
+        </div>
+      </section>
+      <!-- ...existing code... -->
+
+      <section id="testimonials">
+        <h2>Testimonials</h2>
+        <blockquote>
+          <p>"Nathan is a fantastic UX designer who..."</p>
+          <footer>- Former Manager</footer>
+        </blockquote>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <form>
+          <label for="name">Name:</label>
+          <input id="name" name="name" type="text" required />
+          <label for="email">Email:</label>
+          <input id="email" name="email" type="email" required />
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+          <button type="submit">Send</button>
+        </form>
+        <p>Or email me at <a href="mailto:your@email.com">your@email.com</a></p>
+        <p><a href="https://www.linkedin.com/in/yourprofile/">LinkedIn</a></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Nathan Walters</p>
+    </footer>
+    <!-- ...existing code... -->
+    <script>
+      // Theme picker logic
+      const themeButtons = document.querySelectorAll(".theme-picker button");
+      themeButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          document.body.classList.remove("theme-ocean", "theme-rose");
+          if (btn.dataset.theme !== "default") {
+            document.body.classList.add("theme-" + btn.dataset.theme);
+          }
+          // Optionally, save preference
+          localStorage.setItem("theme", btn.dataset.theme);
+        });
+      });
+      // Load saved theme
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme && savedTheme !== "default") {
+        document.body.classList.add("theme-" + savedTheme);
+      }
+    </script>
+  </body>
+</html>
