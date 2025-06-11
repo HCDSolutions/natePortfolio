@@ -350,3 +350,98 @@ button[type="submit"]:focus {
 .theme-picker button:focus {
   outline: 3px solid var(--color-accent);
 }
+/* Disc Slider Styles */
+.disc-slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3em 0;
+  min-height: 350px;
+  perspective: 1000px;
+}
+.disc-slider-track {
+  position: relative;
+  width: 440px; /* Increased from 320px */
+  height: 440px; /* Increased from 320px */
+  border-radius: 50%;
+  transition: transform 0.4s cubic-bezier(0.4, 2, 0.6, 1);
+  will-change: transform;
+  touch-action: pan-x;
+}
+.disc-slide {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 250px;
+  height: 250px;
+  margin: -125px; /* Half of width/height */
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+  overflow: hidden; /* Ensures image stays circular */
+}
+.disc-slide img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0; /* Remove margin */
+  display: block;
+}
+.disc-slide:hover {
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+  z-index: 2;
+}
+@media (max-width: 600px) {
+  .disc-slider-track {
+    width: 220px;
+    height: 220px;
+  }
+  .disc-slide {
+    width: 70px;
+    height: 70px;
+    margin: -35px;
+  }
+  .disc-slide img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.disc-slide.primary {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18), 0 0 0 4px #ffb400;
+  transform: scale(1.12) translate(-50%, -50%) !important;
+  opacity: 1 !important;
+  z-index: 10;
+}
+@media (max-width: 600px) {
+  .disc-slider-track {
+    width: 100vw;
+    height: 70vw;
+    min-width: 0;
+    min-height: 0;
+  }
+   .disc-slide {
+    width: 90vw;         /* Make the disc much larger */
+    height: 90vw;
+    margin: -45vw;
+    opacity: 0 !important;
+    pointer-events: none;
+    z-index: 1;
+    transition: opacity 0.3s, transform 0.3s, width 0.3s, height 0.3s, margin 0.3s;
+  }
+  }
+  .disc-slide.primary {
+    opacity: 1 !important;
+    pointer-events: auto;
+    z-index: 10;
+    transform: scale(1.05) translate(-50%, -50%) !important;
+  }
+}
