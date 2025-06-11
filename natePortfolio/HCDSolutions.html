@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <body class="theme-rose"></body>
     <header>
       <nav>
         <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">
@@ -17,7 +18,7 @@
           <li><a href="HCDSolutions.html#home">Home</a></li>
           <li><a href="HCDSolutions.html#about">About</a></li>
           <li>
-            <a href="HCDSolutions.html#portfolio">Portfolio</a>
+            <a href="HCDSolutions.html#projects">Portfolio</a>
             <ul class="subnav">
               <li><a href="digitalIdentity.html">Digital Identity</a></li>
               <li><a href="voiceOfCustomer.html">Voice of Customer</a></li>
@@ -30,11 +31,13 @@
           <li><a href="HCDSolutions.html#contact">Contact</a></li>
         </ul>
       </nav>
+     <!-- 
       <div class="theme-picker" aria-label="Theme Picker">
         <button data-theme="default" aria-label="Default Theme"></button>
         <button data-theme="ocean" aria-label="Ocean Theme"></button>
         <button data-theme="rose" aria-label="Rose Theme"></button>
       </div>
+      -->
     </header>
 
     <main>
@@ -192,51 +195,8 @@
     <footer>
       <p>&copy; 2025 Nathan Walters</p>
     </footer>
-    <!-- ...existing code... -->
-    <script>
-      // Theme picker logic
-      const themeButtons = document.querySelectorAll(".theme-picker button");
-      themeButtons.forEach((btn) => {
-        btn.addEventListener("click", () => {
-          document.body.classList.remove("theme-ocean", "theme-rose");
-          if (btn.dataset.theme !== "default") {
-            document.body.classList.add("theme-" + btn.dataset.theme);
-          }
-          // Optionally, save preference
-          localStorage.setItem("theme", btn.dataset.theme);
-        });
-      });
-      // Load saved theme
-      const savedTheme = localStorage.getItem("theme");
-      if (savedTheme && savedTheme !== "default") {
-        document.body.classList.add("theme-" + savedTheme);
-      }
-      // Hamburger menu logic
-  const navToggle = document.querySelector('.nav-toggle');
-  const nav = document.querySelector('nav');
-  navToggle.addEventListener('click', () => {
-    nav.classList.toggle('nav-open');
-    navToggle.setAttribute(
-      'aria-expanded',
-      nav.classList.contains('nav-open') ? 'true' : 'false'
-    );
-  });
-
-  // Optional: Close menu when a link is clicked (for better UX)
-  document.querySelectorAll('nav ul a').forEach(link => {
-    link.addEventListener('click', () => {
-      nav.classList.remove('nav-open');
-      navToggle.setAttribute('aria-expanded', 'false');
-    });
-  });
-   // Hero image carousel logic
-  const carouselImages = document.querySelectorAll('.hero-image-carousel .carousel-img');
-  let carouselIndex = 0;
-  setInterval(() => {
-    carouselImages[carouselIndex].classList.remove('active');
-    carouselIndex = (carouselIndex + 1) % carouselImages.length;
-    carouselImages[carouselIndex].classList.add('active');
-  }, 3000); // Change image every 3 seconds
-    </script>
+    <script src="scripts.js"></script>
+  
+    
   </body>
 </html>

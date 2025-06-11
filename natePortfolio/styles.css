@@ -395,7 +395,7 @@ button[type="submit"]:focus {
   border-radius: 16px;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
   overflow: hidden;
-  width: 375px;
+  width: 370px;
   text-decoration: none;
   color: inherit;
   transition: transform 0.2s, box-shadow 0.2s;
