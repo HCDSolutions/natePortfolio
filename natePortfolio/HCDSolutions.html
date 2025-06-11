@@ -9,6 +9,9 @@
   <body>
     <header>
       <nav>
+        <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">
+    <span class="hamburger"></span>
+  </button>
         <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
@@ -27,9 +30,16 @@
 
     <main>
       <section id="home">
-        <h1>Hi, I'm Nate Walters</h1>
-        <p>I'm a Researcher & Designer</p>
-        <img src="your-hero-image.jpg" alt="Nathan Walters UX Portfolio Hero" />
+        <div class="hero-flex">
+          <img
+            src="images/nateSketch.png"
+            alt="Nathan Walters UX Portfolio Hero"
+          />
+          <div>
+            <h1>Hi, I'm Nate Walters</h1>
+            <p>I'm a Researcher & Designer</p>
+          </div>
+        </div>
       </section>
 
       <section id="about">
@@ -39,41 +49,80 @@
         <!-- <video controls src="about-video.mp4"></video> -->
         <a href="NathanWalters_Resume.pdf" download>Download Resume</a>
       </section>
-
-     <!-- <section id="portfolio"> -->
-        <!-- <h2>Selected Work</h2> -->
-        <!-- Repeat this block for each project -->
-        <!--
+      <section id="projects" class="project-cards-section">
+        <h2>Selected Work</h2>
+        <div class="project-cards">
+          <a href="project1.html" class="project-card">
+            <img src="images/diCover.png" alt="Project 1" />
+            <div class="project-card-content">
+              <h3>Project 1</h3>
+              <p>Short summary of Project 1.</p>
+            </div>
+          </a>
+          <a href="project2.html" class="project-card">
+            <img src="images/ssCardCover.png" alt="Project 2" />
+            <div class="project-card-content">
+              <h3>Project 2</h3>
+              <p>Short summary of Project 2.</p>
+            </div>
+          </a>
+          <a href="project3.html" class="project-card">
+            <img src="images/vocPopUpSurvey.jpg" alt="Project 3" />
+            <div class="project-card-content">
+              <h3>Project 3</h3>
+              <p>Short summary of Project 3.</p>
+            </div>
+          </a>
+          <a href="project4.html" class="project-card">
+            <img src="images/ssCardServiceBlueprint.png" alt="Project 4" />
+            <div class="project-card-content">
+              <h3>Project 4</h3>
+              <p>Short summary of Project 4.</p>
+            </div>
+          </a>
+        </div>
+      </section>
+      <!-- <section id="portfolio"> -->
+      <!-- <h2>Selected Work</h2> -->
+      <!-- Repeat this block for each project -->
+      <!--
         <article class="project">
           <h3>Project Title</h3>
           <img src="project-thumbnail.jpg" alt="Project Thumbnail" />
           <p>Short project summary.</p>
           <a href="project1.html">View Case Study</a>
         </article>
--->
-        <!-- Portfolio Disc Slider -->
-      </section>
-      <section id="disc-slider" class="disc-slider">
-        <div class="disc-slider-track">
-          <a href="project1.html" class="disc-slide">
+        </section> -->
+
+      <!-- Portfolio Disc Slider -->
+      <!-- This section will contain the disc slider for portfolio projects -->
+      <!--<section id="disc-slider" class="disc-slider">-->
+       <!-- <div class="disc-slider-track">-->
+          <!-- <a href="project1.html" class="disc-slide">
             <img src="images/diCover.png" alt="Project 1" />
             <span>Project 1</span>
           </a>
-          <a href="project2.html" class="disc-slide">
+          -->
+          <!-- <a href="project2.html" class="disc-slide">
             <img src="images/ssCardCover.png" alt="Project 2" />
             <span>Project 2</span>
           </a>
-          <a href="project3.html" class="disc-slide">
+          -->
+          <!-- <a href="project3.html" class="disc-slide">
             <img src="images/vocPopUpSurvey.jpg" alt="Project 3" />
             <span>Project 3</span>
           </a>
+          -->
+          <!-- 
           <a href="project4.html" class="disc-slide">
             <img src="images/ssCardServiceBlueprint.png" alt="Project 4" />
             <span>Project 4</span>
           </a>
+          -->
           <!-- Add more slides as needed -->
         </div>
       </section>
+
       <!-- ...existing code... -->
       <section id="process" class="parallax-section">
         <h2>My UX Process</h2>
@@ -152,82 +201,24 @@
       if (savedTheme && savedTheme !== "default") {
         document.body.classList.add("theme-" + savedTheme);
       }
-      // Disc Slider Logic
-      const track = document.querySelector(".disc-slider-track");
-      const slides = Array.from(document.querySelectorAll(".disc-slide"));
-      let angle = 270;
-      let startX = null;
-      let lastAngle = 0;
-      const slideCount = slides.length;
-      const step = 360 / slideCount;
-
-     function positionSlides() {
-  let closestIdx = 0;
-  let closestDist = 999;
-  slides.forEach((slide, i) => {
-    const theta = (((i * step + angle) % 360) * Math.PI) / 180;
-    const r = 180; // or your current radius
-    slide.style.transform = `translate(-50%, -50%) translate(${Math.cos(theta) * r}px, ${Math.sin(theta) * r}px)`;
-    slide.style.zIndex = Math.round(100 + Math.sin(theta) * 100);
-    slide.style.opacity = 0.6 + 0.4 * Math.max(0, Math.cos(theta));
-    // Find the slide closest to the bottom (theta ≈ Math.PI/2)
-    const dist = Math.abs(theta - Math.PI / 2);
-    if (dist < closestDist) {
-      closestDist = dist;
-      closestIdx = i;
-    }
-    slide.classList.remove('primary');
+      // Hamburger menu logic
+  const navToggle = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('nav');
+  navToggle.addEventListener('click', () => {
+    nav.classList.toggle('nav-open');
+    navToggle.setAttribute(
+      'aria-expanded',
+      nav.classList.contains('nav-open') ? 'true' : 'false'
+    );
   });
-  slides[closestIdx].classList.add('primary');
-}
-      positionSlides();
 
-      function rotateDisc(delta) {
-        angle += delta;
-        positionSlides();
-      }
-
-      // Mouse wheel
-      track.addEventListener("wheel", (e) => {
-        e.preventDefault();
-        rotateDisc(e.deltaY > 0 ? step : -step);
-      });
-
-      // Mouse drag
-      track.addEventListener("mousedown", (e) => {
-        startX = e.clientX;
-        lastAngle = angle;
-        document.body.style.userSelect = "none";
-      });
-      window.addEventListener("mousemove", (e) => {
-        if (startX !== null) {
-          const dx = e.clientX - startX;
-          angle = lastAngle + dx * 0.5;
-          positionSlides();
-        }
-      });
-      window.addEventListener("mouseup", () => {
-        startX = null;
-        document.body.style.userSelect = "";
-      });
-
-      // Touch drag
-      track.addEventListener("touchstart", (e) => {
-        if (e.touches.length === 1) {
-          startX = e.touches[0].clientX;
-          lastAngle = angle;
-        }
-      });
-      track.addEventListener("touchmove", (e) => {
-        if (startX !== null && e.touches.length === 1) {
-          const dx = e.touches[0].clientX - startX;
-          angle = lastAngle + dx * 0.5;
-          positionSlides();
-        }
-      });
-      track.addEventListener("touchend", () => {
-        startX = null;
-      });
+  // Optional: Close menu when a link is clicked (for better UX)
+  document.querySelectorAll('nav ul a').forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('nav-open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
     </script>
   </body>
 </html>
