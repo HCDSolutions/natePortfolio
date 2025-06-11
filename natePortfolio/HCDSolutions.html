@@ -12,13 +12,22 @@
         <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">
     <span class="hamburger"></span>
   </button>
+          <nav>
         <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#process">Process</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="HCDSolutions.html#home">Home</a></li>
+          <li><a href="HCDSolutions.html#about">About</a></li>
+          <li>
+            <a href="HCDSolutions.html#portfolio">Portfolio</a>
+            <ul class="subnav">
+              <li><a href="digitalIdentity.html">Digital Identity</a></li>
+              <li><a href="voiceOfCustomer.html">Voice of Customer</a></li>
+              <li><a href="ssCardDigital.html">Social Security Card</a></li>
+              <li><a href="project4.html">Project 4</a></li>
+            </ul>
+          </li>
+          <li><a href="HCDSolutions.html#process">Process</a></li>
+          <li><a href="HCDSolutions.html#testimonials">Testimonials</a></li>
+          <li><a href="HCDSolutions.html#contact">Contact</a></li>
         </ul>
       </nav>
       <div class="theme-picker" aria-label="Theme Picker">
@@ -31,13 +40,14 @@
     <main>
       <section id="home">
         <div class="hero-flex">
-          <img
-            src="images/nateSketch.png"
-            alt="Nathan Walters UX Portfolio Hero"
-          />
-          <div>
+          <div class="hero-image-carousel">
+      <img src="images/nateSketch.png" alt="Nathan Walters UX Portfolio Hero" class="carousel-img active" />
+      <img src="images/nateAvatar.png" alt="Alternate Hero 2" class="carousel-img" />
+      <img src="images/natePortrait.png" alt="Alternate Hero 3" class="carousel-img" />
+      </div>    
+      <div>
             <h1>Hi, I'm Nate Walters</h1>
-            <p>I'm a Researcher & Designer</p>
+            <p>UX Researcher & Designer</p>
           </div>
         </div>
       </section>
@@ -52,7 +62,7 @@
       <section id="projects" class="project-cards-section">
         <h2>Selected Work</h2>
         <div class="project-cards">
-          <a href="project1.html" class="project-card">
+          <a href="digitalIdentity.html" class="project-card">
             <img src="images/diCover.png" alt="Project 1" />
             <div class="project-card-content">
               <h3>Project 1</h3>
@@ -219,6 +229,14 @@
       navToggle.setAttribute('aria-expanded', 'false');
     });
   });
+   // Hero image carousel logic
+  const carouselImages = document.querySelectorAll('.hero-image-carousel .carousel-img');
+  let carouselIndex = 0;
+  setInterval(() => {
+    carouselImages[carouselIndex].classList.remove('active');
+    carouselIndex = (carouselIndex + 1) % carouselImages.length;
+    carouselImages[carouselIndex].classList.add('active');
+  }, 3000); // Change image every 3 seconds
     </script>
   </body>
 </html>
