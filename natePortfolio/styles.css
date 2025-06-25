@@ -186,7 +186,7 @@ footer {
 /* ...existing code... */
 .parallax-section {
   background: url("process-bg.jpg") center/cover no-repeat fixed,
-    linear-gradient(120deg, #ffb400cc 0%, #fffbe6cc 100%);
+    linear-gradient(120deg, #fffof3 0%, #e94f64 100%);
   color: #181818;
   padding: 4rem 2rem;
   border-radius: 12px;
@@ -207,7 +207,7 @@ footer {
 }
 
 .step {
-  background: #fff;
+  background: #edc9c9;
   padding: 2rem 1.5rem;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
@@ -226,7 +226,7 @@ footer {
 
 .step h3 {
   margin-bottom: 0.7em;
-  color: #ffb400;
+  color: #3a1c32;
   font-size: 1.2rem;
 }
 
