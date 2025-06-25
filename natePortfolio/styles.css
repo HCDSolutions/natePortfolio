@@ -186,7 +186,7 @@ footer {
 /* ...existing code... */
 .parallax-section {
   background: url("process-bg.jpg") center/cover no-repeat fixed,
-    linear-gradient(120deg, #fffof3 0%, #e94f64 100%);
+    linear-gradient(120deg, #fff0f3 0%, #e94f64 100%);
   color: #181818;
   padding: 4rem 2rem;
   border-radius: 12px;
