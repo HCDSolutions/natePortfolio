@@ -648,3 +648,46 @@ h2 + li {
     max-width: 95%;
   }
 }
+/* Modern Back to Top Button */
+#backToTop {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 3.2rem;
+  height: 3.2rem;
+  background: linear-gradient(
+    135deg,
+    var(--color-accent, #ffb400) 60%,
+    var(--color-link, #0a5cff) 100%
+  );
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.2s, opacity 0.3s;
+  opacity: 0.92;
+}
+
+#backToTop:hover,
+#backToTop:focus {
+  background: linear-gradient(
+    135deg,
+    var(--color-link, #0a5cff) 60%,
+    var(--color-accent, #ffb400) 100%
+  );
+  transform: translateY(-6px) scale(1.08);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+  outline: none;
+  opacity: 1;
+}
+
+#backToTop:focus {
+  outline: 2px solid var(--color-link, #0a5cff);
+}
