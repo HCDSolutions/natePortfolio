@@ -202,9 +202,28 @@
 -->
       <section id="contact" class="contact-section">
         <h2>Contact</h2>
-        <form>
+        <form
+  action="https://formspree.io/f/xpwrollq"
+  method="POST"
+>
+  <label>
+    Your name:
+    <input type="text" name="name" required>
+  <label>
+    Your email:
+    <input type="email" name="email" required>
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Send</button>
+</form>
+        <!--
+<form>
           <form action="https://formspree.io/f/xpwrollq" method="POST">
-           <!-- <input type="text" name="_gotcha" style="display:none"> -->
+           <input type="text" name="_gotcha" style="display:none"> 
           <label for="name">Name:</label>
           <input id="name" name="name" type="text" required />
           <label for="email">Email:</label>
@@ -212,7 +231,7 @@
           <label for="message">Message:</label>
           <textarea id="message" name="message" required></textarea>
           <button type="submit">Send</button>
-        </form>
+        </form> -->
         <!--<p>Or email me at <a href="mailto:your@email.com">your@email.com</a></p>-->
         <p><a href="https://www.linkedin.com/in/nathan-walters/">LinkedIn</a></p>
       </section>
