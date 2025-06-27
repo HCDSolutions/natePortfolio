@@ -677,7 +677,7 @@ h2 + li {
 }
 .testimonials-section,
 .contact-section {
-  --color-bg: #e6f2ff;
+  --color-bg: linear-gradient(120deg, #fff 0%, #b3d1f0 100%);
   --color-bg-alt: #ffffff;
   --color-text: #0a2239;
   --color-accent: #1ca9c9;
