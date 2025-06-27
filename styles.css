@@ -707,3 +707,74 @@ h2 + li {
 .contact-section h3 {
   color: var(--color-header);
 }
+/* Modern Ocean Theme Contact Form */
+form[action*="formspree"] {
+  background: #e6f2ff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(28, 169, 201, 0.1);
+  padding: 2.5rem 2rem;
+  max-width: 480px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+form[action*="formspree"] label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  color: #0a2239;
+  margin-bottom: 0.2em;
+  letter-spacing: 0.02em;
+  font-size: 1.05rem;
+  gap: 0.5em;
+}
+
+form[action*="formspree"] input,
+form[action*="formspree"] textarea {
+  padding: 0.9em 1em;
+  border: 1.5px solid #b2d6e6;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  background: #fff;
+  color: #0a2239;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  resize: vertical;
+  box-shadow: 0 1px 4px rgba(28, 169, 201, 0.04);
+}
+
+form[action*="formspree"] input:focus,
+form[action*="formspree"] textarea:focus {
+  border-color: #1ca9c9;
+  outline: none;
+  box-shadow: 0 0 0 2px #1ca9c955;
+}
+
+form[action*="formspree"] button[type="submit"] {
+  background: linear-gradient(90deg, #1ca9c9 60%, #0a5cff 100%);
+  color: #fff;
+  border: none;
+  padding: 0.9em 2em;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(28, 169, 201, 0.12);
+  margin-top: 0.5em;
+}
+
+form[action*="formspree"] button[type="submit"]:hover,
+form[action*="formspree"] button[type="submit"]:focus {
+  background: linear-gradient(90deg, #0a5cff 60%, #1ca9c9 100%);
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 4px 16px rgba(28, 169, 201, 0.18);
+  outline: none;
+}
+
+@media (max-width: 600px) {
+  form[action*="formspree"] {
+    padding: 1.2rem 0.5rem;
+  }
+}
