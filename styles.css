@@ -186,7 +186,7 @@ footer {
 /* ...existing code... */
 .parallax-section {
   background: url("process-bg.jpg") center/cover no-repeat fixed,
-    linear-gradient(120deg, #fff0f3 0%, #e94f64 100%);
+    linear-gradient(120deg, #fff 0%, #fff0f3 100%);
   color: #181818;
   padding: 4rem 2rem;
   border-radius: 12px;
@@ -244,14 +244,14 @@ footer {
 /* ...existing code... */
 /* Theme variables */
 :root {
-  --color-bg: #f7f7fa;
+  --color-bg: #fff0f3;
   --color-bg-alt: #fff;
-  --color-text: #181818;
-  --color-accent: #ffb400;
-  --color-header: #181818;
+  --color-text: #3a1c32;
+  --color-accent: #e94f64;
+  --color-header: #3a1c32;
   --color-header-text: #fff;
-  --color-link: #0a5cff;
-  --color-link-hover: #ffb400;
+  --color-link: #e94f64;
+  --color-link-hover: #00aeff;
 }
 
 body.theme-ocean {
@@ -316,7 +316,6 @@ button[type="submit"]:focus {
   background: var(--color-header);
   color: var(--color-header-text);
 }
-
 /* Theme Picker Styles */
 .theme-picker {
   display: flex;
@@ -350,7 +349,6 @@ button[type="submit"]:focus {
 .theme-picker button:focus {
   outline: 3px solid var(--color-accent);
 }
-
 #home img {
   width: 180px; /* Adjust as needed */
   max-width: 100%;
@@ -611,20 +609,6 @@ h2 + li {
 }
 .side-by-side-images {
   display: flex;
-  gap: 1em; /* space between images */
-  justify-content: center; /* center images horizontally */
-  align-items: flex-start; /* align images to the top */
-}
-
-.side-by-side-images img {
-  max-width: 48%;
-  height: auto;
-  border-radius: 8px;
-  border: #444 1px solid;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-}
-.side-by-side-images {
-  display: flex;
   gap: 1em;
   justify-content: center;
   align-items: flex-start;
@@ -690,4 +674,36 @@ h2 + li {
 
 #backToTop:focus {
   outline: 2px solid var(--color-link, #0a5cff);
+}
+.testimonials-section,
+.contact-section {
+  --color-bg: #e6f2ff;
+  --color-bg-alt: #ffffff;
+  --color-text: #0a2239;
+  --color-accent: #1ca9c9;
+  --color-header: #0a2239;
+  --color-header-text: #fff;
+  --color-link: #1ca9c9;
+  --color-link-hover: #0a2239;
+
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+.testimonials-section a,
+.contact-section a {
+  color: var(--color-link);
+}
+.testimonials-section a:hover,
+.testimonials-section a:focus,
+.contact-section a:hover,
+.contact-section a:focus {
+  color: var(--color-link-hover);
+}
+
+.testimonials-section h2,
+.testimonials-section h3,
+.contact-section h2,
+.contact-section h3 {
+  color: var(--color-header);
 }
