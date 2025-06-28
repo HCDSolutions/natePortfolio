@@ -1,7 +1,3 @@
-if (location.hostname === "hcdsolutions.github.io") {
-  window.location.href = "https://www.hcdsolutions.org";
-}
-
 // Theme picker logic
 const themeButtons = document.querySelectorAll(".theme-picker button");
 themeButtons.forEach((btn) => {
