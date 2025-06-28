@@ -208,24 +208,26 @@
 -->
       <section id="contact" class="contact-section">
         <h2>Contact</h2>
-        <form
-  action="https://formspree.io/f/xpwrollq"
-  method="POST"
->
-  <label for="name">Your name:</label>
-<input id="name" name="name" type="text" required />
+        
+<form action="https://formspree.io/f/xpwrollq" method="POST">
+  <div class="form-group">
+    <label for="name" class="sr-only">Your name</label>
+    <input id="name" name="name" type="text" placeholder="Your name" required />
+  </div>
 
-  <label>
-    Your email:
-    <input type="email" name="email" required>
-  </label>
-  <label>
-    Your message:
-    <textarea name="message"></textarea>
-  </label>
-  <!-- your other form fields go here -->
-  <button type="submit">Send message</button>
+  <div class="form-group">
+    <label for="email" class="sr-only">Your email</label>
+    <input id="email" name="email" type="email" placeholder="Your email" required />
+  </div>
+
+  <div class="form-group">
+    <label for="message" class="sr-only">Your message</label>
+    <textarea id="message" name="message" rows="4" placeholder="Your message" required></textarea>
+  </div>
+
+  <button type="submit">Send Message</button>
 </form>
+
         <!--
 <form>
           <form action="https://formspree.io/f/xpwrollq" method="POST">
