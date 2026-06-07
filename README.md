@@ -1,6 +1,6 @@
 # Nathan Walters' UX Portfolio
 
-This repository contains the portfolio of Nathan Walters, a UX Designer and Researcher.  The portfolio showcases selected work, UX philosophy, and contact information.
+This repository contains the portfolio of Nathan Walters, a UX Designer and Researcher. The portfolio showcases selected work, UX philosophy, and contact information.
 
 ## Project Structure
 
