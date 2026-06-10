@@ -851,3 +851,49 @@ figcaption {
   color: #555; /* or var(--color-text) for theming */
   line-height: 1.4;
 }
+
+.table-wrapper {
+  overflow-x: auto;
+  margin-top: 1.5rem;
+}
+
+.study-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+  background: #fff;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+}
+
+.study-table caption {
+  text-align: left;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: #0a2239;
+}
+
+.study-table th,
+.study-table td {
+  padding: 1rem 1.25rem;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.study-table th {
+  background: #e6f2ff;
+  color: #0a2239;
+  text-align: left;
+}
+
+.study-table tbody tr:nth-child(even) {
+  background: #f8fbff;
+}
+
+@media (max-width: 700px) {
+  .study-table {
+    min-width: 100%;
+  }
+  .study-table th,
+  .study-table td {
+    padding: 0.85rem 0.9rem;
+  }
+}

@@ -33,22 +33,21 @@
       <section id="project-details">
         <h1>CX Retail Study</h1>
         <p>
-          A grocery retailer is considering adding sustainability messaging
-          (e.g., “Eco-Friendly Packaging”) to its private-label cleaning
-          products. The marketing team wanted to understand whether this
+          A national retailer is considering adding sustainability messaging
+          (e.g., “Eco-Friendly Packaging”) to one of its private-label products. The marketing team wanted to understand whether this
           messaging will influence purchase intent and brand perception. The
-          Consumer Insights Analyst was tasked with evaluating the potential
+          Consumer Experience Analyst was tasked with evaluating the potential
           impact of sustainability messaging on shopper behavior and
           recommending the next steps.
         </p>
         <h2>Data Analysis Phases</h2>
         <ol>
-          <li>Ask: business challenge, objective, or question </li>
-          <li>Prepare: data generation, collection, storage, and data management </li>  
-          <li>Process: data cleaning and data integrity </li>
-          <li>Analyze: data exploration, visualization, and analysis </li>  
-          <li>Share: communicating and interpreting results </li>
-          <li>Act:  putting insights to work to solve the problem </li>
+          <li>Explore: ask questions to understand the business challenge and objectives </li>
+          <li>Prepare: generate, collect, store, and manage data </li>  
+          <li>Process: cleaning, organize, and protect data to ensure integrity </li>
+          <li>Analyze: explore, visualize, and interpret data </li>  
+          <li>Act: share findings and use insights to solve the problem </li>
+          <li>Monitor: track the performance of the implemented solution </li>
         </ol>
 
         <!---
@@ -70,9 +69,15 @@
             behavior.
           </li>
         </ol> -->
-<H2>Methodology </H2>
-<p>Two survey datasets were available, the first assessed respondents' awareness of sustainability claims, perceived importance of sustainability in cleaning products, and purchase intent with and without sustainability messaging. The second survey evaluated behavior as a concept test where respondents were shown one of two packaging mock-ups: either with sustainability messaging or without, and were asked to rate their appeal, trust, and likelihood to purchase.
-To understand participants’ perceptions, we aimed to answer:
+        <h2>Explore Phase</h2>
+        <p>During this phase we explored questions related to generating new customers or transitioning existing customers. Is there a possibility the new eco-label could entirely replace the existing private-label brand?  Was the current brand underperforming in terms of meeting sales targets? Was there existing data on the competitor eco-friendly brands? This information would help us better frame our questions for the survey data we sought to collect.</p>
+<H2>Prepare Phase</H2>
+<p>We built surveys to collect data on consumer perceptions and behavior related to sustainability messaging. The surveys were distributed to a sample of the retailer’s customers, and the data was collected and stored securely for analysis.</p>
+<H2>Process Phase</H2>
+<p>We cleaned the survey data to ensure accuracy and consistency. We also discovered and cleaned interaction data around sales trends on competitor products to expand our scope of the current state. This involved checking for missing values, outliers, and ensuring that the data was properly formatted for analysis.</p> 
+<h2>Analyze Phase</h2>
+<p>We first assessed respondents' awareness of sustainability claims, perceived importance of sustainability in household products, and purchase intent with and without sustainability messaging. The second survey evaluated behavior as a concept test where respondents were shown one of two packaging mock-ups: either with sustainability messaging or without, and were asked to rate their appeal, trust, and likelihood to purchase.
+To understand participants’ perceptions, we aimed to answer the following questions:
 <br>
 <br>
 <ol>
@@ -103,7 +108,7 @@ The same method was applied to the behavior study, where the 10-point Likert sca
 <ul>Scores of 5–6 = Neutral</ul>
 <ul>Scores of 7–10 = Positive</ul>
 </p>
-        <h2>Results</h2>
+        <h2>Act Phase</h2>
         <p>
           The results of the survey data analysis indicate that purchase intent
           may not simply be influenced by awareness of sustainability or having
@@ -155,6 +160,60 @@ The same method was applied to the behavior study, where the 10-point Likert sca
 
                 <p>The below chart displays the distribution of scores per question in the behavioral survey. As observed in the perception survey, a similar proportion of positive response was received for appeal, likelihood to purchase, and trust, across respondents who were shown a label with a sustainability message and those who were shown a label without a sustainability message.</p>
         <img src="images/PerceptionChart.png" alt="Bar chart depicting perception data" />
+     
+        <div class="table-wrapper">
+          <table class="study-table">
+            <caption>Assessment of the associations of perception and behavior</caption>
+            <thead>
+              <tr>
+                <th>Study</th>
+                <th>Dependent Variable a</th>
+                <th>Odds Ratio b</th>
+                <th>95% confidence interval b</th>
+                <th>p-value c</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td rowspan="3">Perception Study Question: Is awareness of sustainability claims significantly associated with importance and intent to purchase?</td>
+                <td>Importance</td>
+                <td>0.76</td>
+                <td>0.56 to 1.03</td>
+                <td>0.08</td>
+              </tr>
+              <tr>
+                <td>Intent to purchase with sustainability message</td>
+                <td>1.12</td>
+                <td>0.83 to 1.53</td>
+                <td>0.46</td>
+              </tr>
+              <tr>
+                <td>Intent to purchase with no sustainability message</td>
+                <td>1.03</td>
+                <td>0.76 to 1.53</td>
+                <td>0.85</td>
+              </tr>
+              <tr>
+                <td rowspan="3">Behavioral Study Question: Is sustainability messaging on labels significantly associated with appeal, likelihood to purchase, and trust?</td>
+                <td>Appeal</td>
+                <td>1.02</td>
+                <td>0.75 to 1.37</td>
+                <td>0.92</td>
+              </tr>
+              <tr>
+                <td>Trust</td>
+                <td>0.85</td>
+                <td>0.63 to 1.14</td>
+                <td>0.27</td>
+              </tr>
+              <tr>
+                <td>Likelihood to purchase</td>
+                <td>1.10</td>
+                <td>0.82 to 1.49</td>
+                <td>0.52</td>
+            </tbody>
+          </table>
+        </div>
       </section>
 
       <section id="conclusion">
