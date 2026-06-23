@@ -688,7 +688,7 @@ h2 + li {
 }
 .testimonials-section,
 .contact-section {
-  --color-bg: linear-gradient(120deg, #fff 0%, #b3d1f0 100%);
+  --color-bg: linear-gradient(120deg, #fff 0%, #edc9c9 100%);
   --color-bg-alt: #ffffff;
   --color-text: #0a2239;
   --color-accent: #1ca9c9;
@@ -872,7 +872,7 @@ figcaption {
 .testimonial-author {
   display: block;
   font-weight: 600;
-  color: var(--color-accent);
+  color: #f9f6ee;
   font-size: 0.95rem;
 }
 
